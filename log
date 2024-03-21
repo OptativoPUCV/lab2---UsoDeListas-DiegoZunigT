@@ -14,3 +14,17 @@ Thu 21 Mar 2024 03:00:33 PM UTC:
  tests:  1|4
 total_score: 10/70
 fa37640
+Thu 21 Mar 2024 03:05:19 PM UTC: 
+ exercises.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:65:12: error: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Werror=format=]
+   65 |   printf("%d", item);
+      |           ~^   ~~~~
+      |            |   |
+      |            int int *
+      |           %ls
+cc1: all warnings being treated as errors
+Compilation failed
+0995f15

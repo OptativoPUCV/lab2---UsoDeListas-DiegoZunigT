@@ -41,7 +41,8 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+List* crea_lista() 
+{
   List* L = create_list();
   int *arr = NULL;
   arr = (int *) malloc (sizeof(int) * 10);
@@ -58,8 +59,11 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
-   return 0;
+int sumaLista(List *L) 
+{
+  int* item = first(L);
+  printf("%d", item);
+  return 0;
 }
 
 /*
