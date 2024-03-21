@@ -50,7 +50,6 @@ List* crea_lista() {
     arr[i] = i + 1;
     pushBack(L, &arr[i]);
   }
-  free(arr); 
   return L;
 }
 
