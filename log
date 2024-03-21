@@ -69,3 +69,21 @@ exercises.c:104:9: error: unused variable ‘item’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5d5644c
+Thu 21 Mar 2024 04:49:59 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  104 |     int item = top(P1);
+      |                ^~~
+exercises.c:105:15: error: ‘head’ undeclared (first use in this function)
+  105 |     push(aux, head);
+      |               ^~~~
+exercises.c:105:15: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:104:9: error: unused variable ‘item’ [-Werror=unused-variable]
+  104 |     int item = top(P1);
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6cb1672
