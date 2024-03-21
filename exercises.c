@@ -61,9 +61,13 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
+  int suma = 0;
   int* item = first(L);
-  printf("%d", *item);
-  return 0;
+  while(item != NULL) {
+    suma += (*item);
+    item = next(L);
+  }
+  return suma;
 }
 
 /*
