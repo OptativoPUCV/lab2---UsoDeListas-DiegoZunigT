@@ -302,3 +302,16 @@ stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 c73d27e
+Thu 21 Mar 2024 04:59:09 PM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:26: error: invalid type argument of unary ‘*’ (have ‘int’)
+  136 |         if((cadena[j] == *caracter + 1 || cadena[j] == *caracter + 2) && (j - i) % 2 == 1) {
+      |                          ^~~~~~~~~
+exercises.c:136:56: error: invalid type argument of unary ‘*’ (have ‘int’)
+  136 |         if((cadena[j] == *caracter + 1 || cadena[j] == *caracter + 2) && (j - i) % 2 == 1) {
+      |                                                        ^~~~~~~~~
+Compilation failed
+407bd98
