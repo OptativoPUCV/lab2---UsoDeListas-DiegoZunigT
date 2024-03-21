@@ -62,7 +62,7 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) 
 {
   int* item = first(L);
-  printf("%d", item);
+  printf("%d", *item);
   return 0;
 }
 
