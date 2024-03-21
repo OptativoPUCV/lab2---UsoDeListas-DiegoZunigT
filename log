@@ -125,3 +125,94 @@ Thu 21 Mar 2024 04:53:47 PM UTC:
  tests:  4|1
 total_score: 50/70
 186abd0
+Thu 21 Mar 2024 04:55:19 PM UTC: 
+ exercises.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘cadena_balanceada’:
+exercises.c:128:15: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  128 |   char pila = createStack();
+      |               ^~~~~~~~~~~
+      |               create_stack
+exercises.c:133:12: error: passing argument 1 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |       push(pila, caracter);
+      |            ^~~~
+      |            |
+      |            char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:133:18: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |       push(pila, caracter);
+      |                  ^~~~~~~~
+      |                  |
+      |                  char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:136:26: error: invalid type argument of unary ‘*’ (have ‘int’)
+  136 |         if((cadena[j] == *caracter + 1 || cadena[j] == *caracter + 2) && (j - i) % 2 == 1) {
+      |                          ^~~~~~~~~
+exercises.c:136:56: error: invalid type argument of unary ‘*’ (have ‘int’)
+  136 |         if((cadena[j] == *caracter + 1 || cadena[j] == *caracter + 2) && (j - i) % 2 == 1) {
+      |                                                        ^~~~~~~~~
+exercises.c:137:16: error: passing argument 1 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  137 |           push(pila, cadena[j]);
+      |                ^~~~
+      |                |
+      |                char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:137:28: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  137 |           push(pila, cadena[j]);
+      |                      ~~~~~~^~~
+      |                            |
+      |                            char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:140:14: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Werror=int-conversion]
+  140 |       if(top(pila) == caracter) return 0;
+      |              ^~~~
+      |              |
+      |              char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:140:20: error: comparison between pointer and integer [-Werror]
+  140 |       if(top(pila) == caracter) return 0;
+      |                    ^~
+exercises.c:141:81: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |     } else if((cadena[i] == ')' || cadena[i] == '}' || cadena[i] == ']') && top(pila) == NULL) {
+      |                                                                                 ^~~~
+      |                                                                                 |
+      |                                                                                 char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:9: error: implicit declaration of function ‘parentesisBalanceados’; did you mean ‘test_parentesis_balanceados’? [-Werror=implicit-function-declaration]
+  217 |     if(!parentesisBalanceados(s)){
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         test_parentesis_balanceados
+cc1: all warnings being treated as errors
+Compilation failed
+f4501c4
