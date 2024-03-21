@@ -42,8 +42,16 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-   return L;
+  List* L = create_list();
+  int *arr = NULL;
+  arr = (int *) malloc (sizeof(int) * 10);
+  if(arr == NULL) exit(EXIT_FAILURE);
+  for(int i = 0; i < 10; i++) {
+    arr[i] = i + 1;
+    pushBack(L, &arr[i]);
+  }
+  free(arr); 
+  return L;
 }
 
 /*
