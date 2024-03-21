@@ -122,12 +122,14 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
+  int size = strlen(cadena);
+  if(size % 2 != 0) return 0;
   int i = 0;
   while(cadena[i] != '\0') {
-    char car = cadena[i];
-    printf("%c\n", car);
-    i++;
+    int j = size - 1 - i;
+    if(cadena[i] + 1 == cadena[j]) i++;
+    else return 0;
   }
-  return 0;
+  return 1;
 }
 
