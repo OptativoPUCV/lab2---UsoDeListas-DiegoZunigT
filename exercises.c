@@ -124,10 +124,11 @@ int parentesisBalanceados(char *cadena)
 {
   int size = strlen(cadena);
   if(size % 2 != 0) return 0;
-  printf("Cadena par");
+  printf("Cadena par\n");
   int i = 0;
   while(cadena[i] != '\0') {
     int j = size - 1 - i;
+    printf("%d: %d <-> %d\n", size, i, j);
     if(cadena[i] + 1 == cadena[j]) i++;
     else return 0;
   }
